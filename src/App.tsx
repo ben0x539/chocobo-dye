@@ -157,7 +157,7 @@ function History({ history}: { history: Step[]}) {
   });
   React.useEffect(() => {
     if (lastRow.current !== null) {
-      lastRow.current.scrollIntoView();
+      lastRow.current.scrollIntoView(false);
     }
   }, [history.length]);
   return <div className="History">
