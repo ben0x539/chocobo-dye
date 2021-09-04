@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chocobo-dye/static/css/main.f53647e1.chunk.css",
+    "main.js": "/chocobo-dye/static/js/main.30d1cb5d.chunk.js",
+    "main.js.map": "/chocobo-dye/static/js/main.30d1cb5d.chunk.js.map",
+    "runtime-main.js": "/chocobo-dye/static/js/runtime-main.052fe32f.js",
+    "runtime-main.js.map": "/chocobo-dye/static/js/runtime-main.052fe32f.js.map",
+    "static/js/2.abf919e5.chunk.js": "/chocobo-dye/static/js/2.abf919e5.chunk.js",
+    "static/js/2.abf919e5.chunk.js.map": "/chocobo-dye/static/js/2.abf919e5.chunk.js.map",
+    "static/js/3.84c3598e.chunk.js": "/chocobo-dye/static/js/3.84c3598e.chunk.js",
+    "static/js/3.84c3598e.chunk.js.map": "/chocobo-dye/static/js/3.84c3598e.chunk.js.map",
+    "index.html": "/chocobo-dye/index.html",
+    "static/css/main.f53647e1.chunk.css.map": "/chocobo-dye/static/css/main.f53647e1.chunk.css.map",
+    "static/js/2.abf919e5.chunk.js.LICENSE.txt": "/chocobo-dye/static/js/2.abf919e5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.052fe32f.js",
+    "static/js/2.abf919e5.chunk.js",
+    "static/css/main.f53647e1.chunk.css",
+    "static/js/main.30d1cb5d.chunk.js"
+  ]
+}
