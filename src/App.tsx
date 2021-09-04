@@ -176,6 +176,52 @@ function Controls({ onFeed, color }: { onFeed: (_: Fruit) => void, color: Color 
   </div>
 }
 
+function pct(n: number): string {
+  return `${(n / 255 * 100)|0}%`;
+}
+
+interface MapColorProps {
+  readonly label: string,
+  readonly color: Color,
+  readonly key: any;
+}
+function MapColor({ label, color, key }: MapColorProps) {
+  let [r, g, b] = color.map(c => c/255.0);
+  let x = (1+g-b)/2;
+  let y = (1-r) * 2/3 + (g+b)/2 * 1/3;
+  const style = {
+    whiteSpace: 'nowrap' as any,
+    position: 'absolute' as const,
+    left: `${x * 100}%`,
+    top: `${y * 100}%`,
+    transform: `translate(-${x*100}%, -${y*100}%)`,
+    align: 'center',
+  };
+  return <div key={key} className="MapDyeColor" style={style}>
+    <div>{label}</div>
+    <ColorBadge color={color} />
+  </div>;
+}
+
+interface MapProps {
+  readonly history: Step[],
+}
+
+
+function Map({ history }: MapProps) {
+  const dyes = Object.entries(DyeColors).map(([name, color], i) => {
+    return <MapColor label={name} color={color} key={i} />;
+  });
+  const path = history.slice(-1).map(({ color }, i) => {
+    return <MapColor label={`Step ${i}`} color={color} key={i} />;
+  });
+  const style = { zIndex: 10 };
+  return <div className="Map">
+    {dyes}
+    <div style={style}>{path}</div>
+  </div>;
+}
+
 export default App;
 
 interface State {
@@ -203,7 +249,7 @@ function App() {
   return (
     <div className="App" style={styleCurrent}>
       <div className="AppGrid">
-        <div className="Panel"><span>todo</span></div>
+        <Map history={history} />
         <Controls color={currentColor} onFeed={onFeed} />
         <History history={history}/>
       </div>

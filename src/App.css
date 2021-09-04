@@ -8,9 +8,9 @@
 .AppGrid {
   display: grid;
   grid:
-    "panel controls  " max-content
-    "panel history   " 1fr /
-    1fr    max-content;
+    "map controls  " max-content
+    "map history   " 1fr /
+    1fr  max-content;
   position: relative;
   background: var(--app-current-color);
   height: 100%;
@@ -35,12 +35,10 @@
   min-width: 300px;
 }
 
-.App .Panel {
+.App .Map {
   min-width: 400px;
-  grid-area: panel;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  grid-area: map;
+  position: relative;
 }
 
 .App .ColorBadge {
