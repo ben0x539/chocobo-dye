@@ -218,7 +218,7 @@ function Map({ history }: MapProps) {
     let height = 0;
     const style = { opacity, height };
     return <div style={style}>
-      <MapColor label={`Step ${i}`} color={color} key={i} />;
+      <MapColor label={`Step ${i}`} color={color} key={i} />
     </div>;
   });
   const style = { zIndex: 10 };
