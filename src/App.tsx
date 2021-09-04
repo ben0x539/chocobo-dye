@@ -215,7 +215,8 @@ function Map({ history }: MapProps) {
   const path = history.map(({ color }, i) => {
     let distance = history.length - 1 - i;
     let opacity = (1 - Math.min(distance, 20)/20) ** 2.5;
-    const style = { opacity };
+    let height = 0;
+    const style = { opacity, height };
     return <div style={style}>
       <MapColor label={`Step ${i}`} color={color} key={i} />;
     </div>;
