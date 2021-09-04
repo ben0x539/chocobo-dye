@@ -212,8 +212,13 @@ function Map({ history }: MapProps) {
   const dyes = Object.entries(DyeColors).map(([name, color], i) => {
     return <MapColor label={name} color={color} key={i} />;
   });
-  const path = history.slice(-1).map(({ color }, i) => {
-    return <MapColor label={`Step ${i}`} color={color} key={i} />;
+  const path = history.map(({ color }, i) => {
+    let distance = history.length - 1 - i;
+    let opacity = (1 - Math.min(distance, 20)/20) ** 2.5;
+    const style = { opacity };
+    return <div style={style}>
+      <MapColor label={`Step ${i}`} color={color} key={i} />;
+    </div>;
   });
   const style = { zIndex: 10 };
   return <div className="Map">
