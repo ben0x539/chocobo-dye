@@ -114,7 +114,7 @@ const fruits = [
   { name: "Xelphatol Apple",      colorDiff: [+5, -5, -5] },
   { name: "Mamook Pear",          colorDiff: [-5, +5, -5] },
   { name: "O'Ghomoro Berries",    colorDiff: [-5, -5, +5] },
-  { name: "Doman Plum",           colorDiff: [-5, -5, +5] },
+  { name: "Doman Plum",           colorDiff: [-5, +5, +5] },
   { name: "Valfruit",             colorDiff: [+5, -5, +5] },
   { name: "Cieldalaes Pineapple", colorDiff: [+5, +5, -5] },
 ] as const;
